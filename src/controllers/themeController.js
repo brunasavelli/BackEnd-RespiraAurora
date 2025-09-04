@@ -27,6 +27,7 @@ const createTheme = async (req, res) => {
         const newTheme = await themeModel.createTheme(name, description);
         res.status(201).json(newTheme);
     } catch (error) {
+        console.error(error);
         res.status(500).json({ message: "Erro ao criar tema." });
     }
 };
