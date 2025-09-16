@@ -23,8 +23,9 @@ const getTheme = async (req, res) => {
 
 const createTheme = async (req, res) => {
     try {
-        const { name, description } = req.body;
-        const newTheme = await themeModel.createTheme(name, description);
+        const { name, level, category, duration, description } = req.body;
+        const photo = req.file ? req.file.filename : null;
+        const newTheme = await themeModel.createTheme(name, photo, level, category, duration, description);
         res.status(201).json(newTheme);
     } catch (error) {
         console.error(error);
