@@ -38,3 +38,4 @@ De volta no VScode rode o seguinte código no terminal:
 ```bash
 npm run dev
 ```
+Com isso seu back estará rodando em : http://localhost:3000 ou http://[ip_do_seu_computador]:3000
