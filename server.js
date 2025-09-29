@@ -1,14 +1,14 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const themeRoutes = require("./src/routes/themeRoutes");
+const agentRoutes = require("./src/routes/agentRoutes");
 const path = require("path");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/themes", themeRoutes);
+app.use("/api/agents", agentRoutes);
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
