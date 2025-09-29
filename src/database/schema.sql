@@ -1,16 +1,19 @@
 CREATE DATABASE respira_aurora;
 
+
 \c respira_aurora;
+
 
 CREATE TABLE themes (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     photo TEXT,
     level VARCHAR(50),
-    category VARCHAR(50),   
+    category VARCHAR(50),  
     duration VARCHAR(20),
     description TEXT
 );
+
 
 INSERT INTO themes (name, photo, level, category, duration, description) VALUES
 ('Limpeza Interior', 'earth.png', 'Iniciante', 'Relaxar', '5 min', 'Visualize a chuva lavando nao so a terra, mas tambem seus pensamentos e tensoes.'),
@@ -33,5 +36,3 @@ INSERT INTO themes (name, photo, level, category, duration, description) VALUES
 ('Ceu Estrelado', 'galaxy.png', 'Avancado', 'Conexao', '25 min', 'Meditacao sob um ceu estrelado, conectando-se com o universo.'),
 ('Caminho das Nuvens', 'cloud.png', 'Iniciante', 'Fluidez', '10 min', 'Siga o movimento das nuvens, aprendendo a fluir com as mudancas.'),
 ('Fonte da Calma', 'drop.png', 'Intermediario', 'Serenidade', '15 min', 'Imagine uma fonte de agua calma, trazendo serenidade ao seu ser.');
-
--- fix

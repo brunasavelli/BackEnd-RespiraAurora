@@ -1,5 +1,6 @@
 const themeModel = require("../models/themeModel");
 
+
 const getAllThemes = async (req, res) => {
     try {
         const themes = await themeModel.getThemes();
@@ -8,6 +9,7 @@ const getAllThemes = async (req, res) => {
         res.status(500).json({ message: "Erro ao buscar tema." });
     }
 };
+
 
 const getTheme = async (req, res) => {
     try {
@@ -21,6 +23,7 @@ const getTheme = async (req, res) => {
     }
 };
 
+
 const createTheme = async (req, res) => {
     try {
         const { name, level, category, duration, description } = req.body;
@@ -32,6 +35,7 @@ const createTheme = async (req, res) => {
         res.status(500).json({ message: "Erro ao criar tema." });
     }
 };
+
 
 const updateTheme = async (req, res) => {
     try {
@@ -46,6 +50,7 @@ const updateTheme = async (req, res) => {
     }
 };
 
+
 const deleteTheme = async (req, res) => {
     try {
         await themeModel.deleteTheme(req.params.id);
@@ -55,4 +60,7 @@ const deleteTheme = async (req, res) => {
     }
 };
 
+
 module.exports = { getAllThemes, getTheme, createTheme, updateTheme, deleteTheme };
+
+
