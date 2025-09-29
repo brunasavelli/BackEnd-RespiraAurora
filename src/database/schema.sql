@@ -33,3 +33,5 @@ INSERT INTO themes (name, photo, level, category, duration, description) VALUES
 ('Ceu Estrelado', 'galaxy.png', 'Avancado', 'Conexao', '25 min', 'Meditacao sob um ceu estrelado, conectando-se com o universo.'),
 ('Caminho das Nuvens', 'cloud.png', 'Iniciante', 'Fluidez', '10 min', 'Siga o movimento das nuvens, aprendendo a fluir com as mudancas.'),
 ('Fonte da Calma', 'drop.png', 'Intermediario', 'Serenidade', '15 min', 'Imagine uma fonte de agua calma, trazendo serenidade ao seu ser.');
+
+-- fix
